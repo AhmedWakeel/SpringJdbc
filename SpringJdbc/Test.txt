@@ -1,0 +1,23 @@
+To connect with dervy db
+
+set environment configuration in system
+
+variable name = DERBY_HOME   
+variable value = D:\JAVA\derbyserver\db-derby-10.14.2.0-bin    paste derby home location
+
+path = D:\JAVA\derbyserver\db-derby-10.14.2.0-bin\bin     in path add bin directory location of derby where you have unzip the folder
+
+
+current derby folder in bin directory open the cmd and write startNetworkServer.bat this will start the server of db
+same directroy open another cmd and write ij.bat  this will connect with dervy db and you can run sql commands from cmd
+
+connect 'jdbc:derby://localhost:1527/db;create=true';
+
+
+"jdbc:derby://localhost:1527/myDB;create=true;user=me;password=mine";
+
+"org.apache.derby.jdbc.ClientDriver"
+
+String dbURL = "jdbc:derby:codejava/webdb;create=true";
+Connection conn = DriverManager.getConnection(dbURL);
+
